@@ -5,3 +5,6 @@ You can read more about this on my Medium Blog: https://medium.com/p/de57bf2c8ac
 
 There is nothing fancy wiht npm. So simply run git clone, to download the project.
 Enjoy!
+
+This is the final project:
+![Uploading Recording #11.gif…]()
