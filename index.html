@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Transition</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main id="overall-div"> <!-- Contains All of the outer sections -->      
+      <section class="car-outer-section"> <!-- Overall Section For Car -->
+        <div class="inner-section" onclick="showDetailsSection('red-car-detail-section')">
+
+          <img src="/images/red-car-main.webp" class="main-img">
+          
+          <div class="text-div">
+            <p class="tool-text" style="color: #67313A;">Bespoke Showroom</p>
+            <h1 class="headline">Refined</h1>
+            <span class="body-text">Our curation of Defenders that we have upgraded and enhanced, ready for you to view and test-drive by appointment today.</span>
+  
+            <!-- More Info Button -->
+            <div class="more-info-button">
+              <p class="tool-text"> More Info </p>
+              <!-- Right Arrow -->
+              <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" fill="white"></path> </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detail Section -->
+        <div id="red-car-detail-section" class="inner-section details-section" style="background-color: #291013;" onclick="dismissDetialsSection('red-car-detail-section')">
+          <div class="text-div">
+            <p class="tool-text">Bespoke Showroom</p>
+            <h1 class="headline">Refined</h1>
+            <span class="body-text">Whilst these cars are assigned a specification by ourselves, the beauty of BESPOKE is that any of these vehicles all have the possibility to be refined further to fit your needs.</span>
+            
+            <!-- Buttons -->
+            <div class="detail-buttons-div"> 
+              <button class="detail-button"> <p class="tool-text">More Info</p> </button>
+              <button class="detail-button"> <p class="tool-text">Close</p> </button>
+            </div>
+          </div>
+
+          <!-- Images -->
+          <div class="detail-imgs-div">
+            <img src="/images/red-car-closeup.webp" class="closeup-detail-img">
+            <img src="/images/red-car-carseat.webp" class="main-img carseat-detail-img">
+          </div>
+        </div>
+      </section>
+    
+      <section class="car-outer-section"> <!-- Overall Section For Reversed Car -->
+        <div class="inner-section" onclick="showDetailsSection('green-car-detail-section')">
+          <div class="text-div">
+            <p class="tool-text" style="color: #637B68;">Bespoke your Car</p>
+            <h1 class="headline">Redefined</h1>
+            <span class="body-text">Offering the client to collaborate with ourselves and take this further using their existing vehicle and our expertise for your car to be reborn through BESPOKE.</span>
+  
+            <!-- More Info Button -->
+            <div class="more-info-button">
+              <p class="tool-text"> More Info </p>
+              <!-- Right Arrow -->
+              <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" fill="white"></path> </svg>
+            </div>
+          </div>
+
+          <img src="/images/green-car-main.webp" class="main-img">      
+        </div>
+
+        <!-- Detail Section -->
+        <div id="green-car-detail-section" class="inner-section details-section reverse" style="background-color: #373E2C;" onclick="dismissDetialsSection('green-car-detail-section', true)">
+          <!-- Images -->
+          <div class="detail-imgs-div">
+            <img src="/images/green-car-closeup.webp" class="closeup-detail-img reverse-closeup">
+            <img src="/images/green-car-carseat.webp" class="main-img carseat-detail-img reverse">
+          </div>
+                    
+          <div class="text-div">
+            <p class="tool-text">Bespoke your Car</p>
+            <h1 class="headline">Redefined</h1>
+            <span class="body-text">We pride ourselves in being the experts at taking your much loved Defender, enhancing all areas and ensuring the car is as individual as yourself.</span>
+            
+            <!-- Buttons -->
+            <div class="detail-buttons-div"> 
+              <button class="detail-button"> <p class="tool-text">More Info</p> </button>
+              <button class="detail-button"> <p class="tool-text">Close</p> </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

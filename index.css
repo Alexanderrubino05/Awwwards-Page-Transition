@@ -1,0 +1,151 @@
+@font-face {
+  font-family: Proxima;
+  src: url('/fonts/Proxima\ Nova\ Font.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #111;
+  overflow-x: hidden;
+  font-family: Proxima;
+}
+
+#overall-div {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.car-outer-section {
+  position: relative;
+}
+
+.inner-section {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  cursor: url(/images/hover-plus.png) 42.5 42.5, default; /* Change Cursor to Plus */
+}
+
+/* Image */
+.main-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* For the Text */
+.text-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  padding: 0 15% 0 15%;
+  gap: 16px;
+}
+
+.tool-text {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.headline {
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+.body-text {
+  line-height: 1.5em;
+  color: gray;
+}
+
+.more-info-button {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.more-info-button svg {
+  transition: transform .3s ease-out;
+}
+
+.more-info-button:hover svg {
+  transform: translateX(4px);
+}
+
+/* Detail Section */
+.details-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(100%);
+  transition: transform .75s ease-in-out,-webkit-transform .75s ease-in-out;
+  cursor: url(/images/hover-minus.png) 42.5 42.5, default; /* Change Cursor to Minus */
+}
+
+/* Buttons */
+.detail-buttons-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.detail-button {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid white;
+  color: white;
+  padding: 16px;
+  transition: all .3s ease;
+  cursor: url(/images/hover-minus.png) 42.5 42.5, default; /* Change Cursor to Minus */
+}
+
+.detail-button:hover {
+  background-color: white;
+  color: #111;
+}
+
+/* Images */
+.detail-imgs-div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.closeup-detail-img {
+  top: 50%;
+  transform: translate(100%, -50%);
+  width: 70%;
+  height: 70%;
+  z-index: 1;
+  box-shadow: 0 0 8px #111;
+}
+
+.carseat-detail-img {
+  width: 60%;
+  justify-self: end;
+  transform: translateX(0%);
+}
+
+.detail-imgs-div img { /* Effects both Detail Images */
+  position: absolute;
+  object-fit: cover;
+  opacity: 0;
+  transition: all .75s ease-in-out,-webkit-transform .75s ease-in-out;
+}
+
+.reverse {
+  justify-self: start;
+  transform: translateX(-100%);
+}
+
+.reverse-closeup {
+  right: 0;
+  transform: translate(-100%, -50%);
+}
